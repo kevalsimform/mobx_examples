@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobx_examples/counter/counter_widget.dart';
+import 'package:mobx_examples/random_stream/random_stream_widget.dart';
 import 'package:mobx_examples/todo/todo_widget.dart';
 
 import 'connectivity/connectivity_store.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'MobX',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home:  GithubExample(),
+      home:  RandomNumberExample(),
     );
   }
 }

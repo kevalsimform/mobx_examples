@@ -31,13 +31,18 @@ abstract class _FormStore with Store {
   void setupValidations() {
     _disposers = [
       reaction((_) => name, validateUsername),
+      reaction((_) => usernameCheck, (value){
+        print(value.status);
+      }),
       reaction((_) => email, validateEmail),
       reaction((_) => password, validatePassword)
     ];
   }
 
+
   @action
   Future validateUsername(String value) async {
+
     if (value.isEmpty) {
       error.username = 'Cannot be blank';
       return;

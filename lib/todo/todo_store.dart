@@ -26,6 +26,7 @@ abstract class _Todo with Store {
 
 }
 
+
 class TodoStore = _TodoStore with _$TodoStore;
 
 abstract class _TodoStore with Store {
